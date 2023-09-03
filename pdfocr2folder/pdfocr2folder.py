@@ -7,7 +7,7 @@ import datetime
 import cv2
 from cnocr import CnOcr
  
-def imageOCR(imagePath,pdfOutPath):
+def imageOCR(imagePath,pdfOutPath): #测试使用
     """
     img_fq = imagePath
     ocr = CnOcr()
@@ -23,7 +23,7 @@ def imageOCR(imagePath,pdfOutPath):
     print(resultText)
     cv2.imwrite((pdfOutPath + "/"+ str(resultText) +".jpg"), roi)
     
-def pdf2img(pdfPath, pdfOutPath):
+def pdf2img(pdfPath, pdfOutPath): #测试使用
     print("拆分文件输出路径为：" + os.path.abspath(pdfOutPath))
     pdfDoc = fitz.open(pdfPath)
     numPage = pdfDoc.page_count
